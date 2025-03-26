@@ -1,132 +1,160 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="Class Diagram">
+  <diagram name="Use Case Diagram">
     <mxGraphModel dx="1314" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <!-- BaseEntity -->
-        <mxCell id="BaseEntity" value="BaseEntity" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="160" height="120" as="geometry" />
+        <!-- Actors -->
+        <mxCell id="Admin" value="Administrator" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="BaseEntity_body" value="" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="BaseEntity">
-          <mxGeometry x="0" y="0" width="160" height="120" as="geometry" />
+        <mxCell id="Librarian" value="Librarian" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="80" height="30" as="geometry" />
         </mxCell>
-        <!-- Appointment -->
-        <mxCell id="Appointment" value="Appointment" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="40" width="200" height="180" as="geometry" />
+        <mxCell id="Member" value="Member" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Appointment_body" value="patient_id: int&#10;doctor_id: int&#10;date: date_type&#10;time: time_type&#10;status: str&#10;about: Optional&#10;appointment_id: int&#10;update_patient_id(value: int)&#10;update_doctor_id(value: int)&#10;update_date(value: date_type)&#10;update_time(value: time_type)&#10;update_status(value: str)&#10;is_completed()&#10;is_active()&#10;cancel()&#10;mark_completed()&#10;mark_no_show()&#10;update_about(value: str)&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Appointment">
-          <mxGeometry x="0" y="0" width="200" height="180" as="geometry" />
+        
+        <!-- Use Cases -->
+        <!-- User Management -->
+        <mxCell id="UserManagement" value="User Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="20" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- Doctor -->
-        <mxCell id="Doctor" value="Doctor" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="40" width="200" height="200" as="geometry" />
+        <mxCell id="UserRegistration" value="User Registration" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Doctor_body" value="system_service&#10;doctor_id: int&#10;view_patient_record(patient_id: int)&#10;add_prescription(prescription: Prescription)&#10;edit_prescription(patient_id: int, prescription_id: int, updated_prescription: Prescription)&#10;delete_prescription(patient_id: int, prescription_id: int)&#10;add_treatment(patient_id: int, treatment: Treatment)&#10;edit_treatment(patient_id: int, treatment_id: int, updated_treatment: Treatment)&#10;delete_treatment(patient_id: int, treatment_id: int)&#10;add_medication(patient_id: int, medication: Medication)" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Doctor">
-          <mxGeometry x="0" y="0" width="200" height="200" as="geometry" />
+        <mxCell id="UserRoles" value="User Roles and Permissions" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- Fee -->
-        <mxCell id="Fee" value="Fee" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="40" width="200" height="160" as="geometry" />
+        <mxCell id="UserAccount" value="User Account Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
+          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Fee_body" value="patient_id: int&#10;amount: float&#10;fee_type: FeeType&#10;description: str&#10;date: str&#10;paid: bool&#10;mark_as_paid()&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Fee">
-          <mxGeometry x="0" y="0" width="200" height="160" as="geometry" />
+
+        <!-- Book Management -->
+        <mxCell id="BookManagement" value="Book Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="20" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- FinancialReport -->
-        <mxCell id="FinancialReport" value="FinancialReport" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="940" y="40" width="200" height="140" as="geometry" />
+        <mxCell id="Inventory" value="Inventory Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FinancialReport_body" value="report_type: str&#10;amount: float&#10;description: str&#10;date: date&#10;report_id: int&#10;update_amount(new_amount: float)&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="FinancialReport">
-          <mxGeometry x="0" y="0" width="200" height="140" as="geometry" />
+        <mxCell id="Categorization" value="Categorization and Tagging" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- Medication -->
-        <mxCell id="Medication" value="Medication" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="40" width="200" height="160" as="geometry" />
+        <mxCell id="Availability" value="Availability Tracking" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
+          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Medication_body" value="patient_id: int&#10;name: str&#10;quantity: str&#10;start_date: date&#10;end_date: date&#10;notes: str&#10;active: bool&#10;finished: bool&#10;stop_medication()&#10;update_notes(value: str)&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Medication">
-          <mxGeometry x="0" y="0" width="200" height="160" as="geometry" />
+
+        <!-- Borrowing and Returning -->
+        <mxCell id="BorrowingReturning" value="Borrowing and Returning" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- Patient -->
-        <mxCell id="Patient" value="Patient" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="220" width="240" height="320" as="geometry" />
+        <mxCell id="Transaction" value="Transaction Handling" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Patient_body" value="name: str&#10;age: int&#10;gender: str&#10;contact: str&#10;history: List~str~&#10;prescriptions: List~Prescription~&#10;medications: List~Medication~&#10;fees: List~Fee~&#10;treatments: List~Treatment~&#10;patient_id: int&#10;add_history_entry(entry: str)&#10;add_treatment_to_history(treatment: Treatment)&#10;add_prescription_to_history(prescription: Prescription)&#10;current_medications: List~Medication~&#10;get_report_data()&#10;add_prescription(prescription: Prescription)&#10;get_prescriptions()&#10;get_prescription(prescription_id: int)&#10;update_prescription(prescription_id: int, updated_prescription: Prescription)&#10;remove_prescription(prescription_id: int)&#10;add_medication(medication: Medication)&#10;get_medications()&#10;get_medication(medication_id: int)&#10;update_medication(medication_id: int, updated_medication: Medication)&#10;remove_medication(medication_id: int)&#10;add_treatment(treatment: Treatment)&#10;get_treatments()&#10;get_treatment(treatment_id: int)&#10;update_treatment(treatment_id: int, updated_treatment: Treatment)&#10;remove_treatment(treatment_id: int)&#10;add_fee(fee: Fee)&#10;get_fees()&#10;get_fee(fee_id: int)&#10;update_fee(fee_id: int, updated_fee: Fee)&#10;remove_fee(fee_id: int)&#10;calculate_total_fees()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Patient">
-          <mxGeometry x="0" y="0" width="240" height="320" as="geometry" />
+        <mxCell id="Reservation" value="Reservation System" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- Prescription -->
-        <mxCell id="Prescription" value="Prescription" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="220" width="200" height="160" as="geometry" />
+        <mxCell id="Renewals" value="Renewals" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
+          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Prescription_body" value="patient_id: int&#10;doctor_id: int&#10;medication: Medication&#10;date: date&#10;start_date: date&#10;end_date: date&#10;prescription_id: int&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Prescription">
-          <mxGeometry x="0" y="0" width="200" height="160" as="geometry" />
+
+        <!-- Search and Discovery -->
+        <mxCell id="SearchDiscovery" value="Search and Discovery" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- Receptionist -->
-        <mxCell id="Receptionist" value="Receptionist" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="220" width="240" height="240" as="geometry" />
+        <mxCell id="Search" value="Search Functionality" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Receptionist_body" value="system_service&#10;add_appointment(appointment: Appointment)&#10;edit_appointment(appointment_id: int, updated_appointment: Appointment)&#10;delete_appointment(appointment_id: int)&#10;generate_financial_report(start_date: str, end_date: str)&#10;add_fee(patient_id: int, fee: Fee)&#10;edit_fee(patient_id: int, fee_id: int, updated_fee: Fee)&#10;delete_fee(patient_id: int, fee_id: int)&#10;add_supply(supply: Supply)&#10;edit_supply(supply_id: int, updated_supply: Supply)&#10;delete_supply(supply_id: int)&#10;search_patients(search_term: str)&#10;view_upcoming_appointments()&#10;mark_appointment_status(appointment_id: int, status: str)" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Receptionist">
-          <mxGeometry x="0" y="0" width="240" height="240" as="geometry" />
+        <mxCell id="Filters" value="Advanced Filters" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- Supply -->
-        <mxCell id="Supply" value="Supply" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="780" y="220" width="200" height="140" as="geometry" />
+        <mxCell id="Recommendations" value="Recommendation System" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
+          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Supply_body" value="name: str&#10;quantity: int&#10;unit_price: float&#10;category: str&#10;total_value()&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Supply">
-          <mxGeometry x="0" y="0" width="200" height="140" as="geometry" />
+
+        <!-- Reporting and Analytics -->
+        <mxCell id="ReportingAnalytics" value="Reporting and Analytics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- System -->
-        <mxCell id="System" value="System" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="220" width="200" height="200" as="geometry" />
+        <mxCell id="Reports" value="Reports for Administrators" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="System_body" value="users: Dict~int, User~&#10;patients: Dict~int, Patient~&#10;appointments: Dict~int, Appointment~&#10;supplies: Dict~int, Supply~&#10;get_user_from_username(username: str)&#10;add_user(user: User)&#10;edit_user(user_id: int, updated_user: User)&#10;remove_user(user_id: int)&#10;get_user(user_id: int)&#10;add_patient(patient: Patient)&#10;update_patient(patient_id: int, updated_patient: Patient)&#10;get_patient_from_id(patient_id: int)&#10;get_appointments(user: User)&#10;add_appointment(appointment: Appointment)&#10;update_appointment(appointment_id: int, updated_appointment: Appointment)&#10;delete_appointment(appointment_id: int)&#10;verify_prescription(prescription: Prescription)&#10;add_supply(supply: Supply)&#10;update_supply(supply_id: int, updated_supply: Supply)&#10;delete_supply(supply_id: int)" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="System">
-          <mxGeometry x="0" y="0" width="200" height="200" as="geometry" />
+        <mxCell id="Analytics" value="Usage Analytics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- Task -->
-        <mxCell id="Task" value="Task" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="560" width="160" height="120" as="geometry" />
+        <mxCell id="Dashboards" value="Customizable Dashboards" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
+          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Task_body" value="title: str&#10;description: str&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Task">
-          <mxGeometry x="0" y="0" width="160" height="120" as="geometry" />
+
+        <!-- Notifications -->
+        <mxCell id="Notifications" value="Notifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="220" width="120" height="60" as="geometry" />
         </mxCell>
-        <!-- Treatment -->
-        <mxCell id="Treatment" value="Treatment" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="560" width="200" height="160" as="geometry" />
+        <mxCell id="Alerts" value="Automated Alerts" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Notifications">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Treatment_body" value="symptoms: str&#10;diagnosis: str&#10;treatment: str&#10;date: date&#10;finished: bool&#10;treatment_id: int&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Treatment">
-          <mxGeometry x="0" y="0" width="200" height="160" as="geometry" />
+        <mxCell id="Events" value="Event Notifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Notifications">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- User -->
-        <mxCell id="User" value="User" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="560" width="240" height="180" as="geometry" />
+
+        <!-- Integration -->
+        <mxCell id="Integration" value="Integration" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="User_body" value="username: str&#10;password_hash: str&#10;user_type: UserType&#10;profile_image_directory: str&#10;access_permissions: List~AccessPermission~&#10;tasks: List~Task~&#10;weekly_tasks: List~Task~&#10;emergency_tasks: List~Task~&#10;id: int&#10;add_access_permission(access: str, access_link: str)&#10;add_task(task: Task)&#10;add_weekly_task(task: Task)&#10;add_emergency_task(task: Task)&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="User">
-          <mxGeometry x="0" y="0" width="240" height="180" as="geometry" />
+        <mxCell id="APIs" value="Third-party APIs" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Integration">
+          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
         </mxCell>
-        <!-- AccessPermission -->
-        <mxCell id="AccessPermission" value="AccessPermission" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="720" y="560" width="160" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="AccessPermission_body" value="access: str&#10;access_link: str&#10;to_dict()" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="AccessPermission">
-          <mxGeometry x="0" y="0" width="160" height="120" as="geometry" />
-        </mxCell>
-        <!-- Utils -->
-        <mxCell id="Utils" value="Utils" style="swimlane;html=1;" vertex="1" parent="1">
-          <mxGeometry x="900" y="560" width="200" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="Utils_body" value="get_object_index_in_container(container: List~T~, object: T, get_identifier: Callable~T,Any~)&#10;get_object_index_in_container_id(container: List~T~, id: int, get_id: Callable~T,int~)&#10;find_objects_by_attribute(container: List~T~, attr_name: str, attr_value: Any)&#10;safe_get_by_id(container: List~T~, id_value: int, id_getter: Callable~T,int~)" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="Utils">
-          <mxGeometry x="0" y="0" width="200" height="160" as="geometry" />
+        <mxCell id="BarcodeRFID" value="Barcode and RFID Support" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Integration">
+          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
         </mxCell>
 
         <!-- Relationships -->
-        <mxCell id="rel1" edge="1" parent="1" source="Appointment" target="BaseEntity" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;">
+        <mxCell id="rel1" edge="1" parent="1" source="Admin" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel2" edge="1" parent="1" source="Doctor" target="BaseEntity" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;">
+        <mxCell id="rel2" edge="1" parent="1" source="Admin" target="BookManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel3" edge="1" parent="1" source="Fee" target="BaseEntity" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;">
+        <mxCell id="rel3" edge="1" parent="1" source="Admin" target="ReportingAnalytics" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        </mxGraphModel>
-    </diagram>
+        <mxCell id="rel4" edge="1" parent="1" source="Admin" target="Integration" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="Librarian" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="Librarian" target="BookManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="Librarian" target="BorrowingReturning" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="Librarian" target="SearchDiscovery" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="Librarian" target="ReportingAnalytics" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel10" edge="1" parent="1" source="Librarian" target="Notifications" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel11" edge="1" parent="1" source="Librarian" target="Integration" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel12" edge="1" parent="1" source="Member" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel13" edge="1" parent="1" source="Member" target="BorrowingReturning" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel14" edge="1" parent="1" source="Member" target="SearchDiscovery" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel15" edge="1" parent="1" source="Member" target="Notifications" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
