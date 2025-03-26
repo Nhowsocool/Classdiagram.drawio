@@ -1,158 +1,101 @@
-<mxfile host="app.diagrams.net">
+<mxfile>
   <diagram name="Use Case Diagram">
-    <mxGraphModel dx="1314" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1138" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
         
         <!-- Actors -->
-        <mxCell id="Admin" value="Administrator" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="80" height="30" as="geometry" />
+        <mxCell id="2" value="Doctor" style="shape=actor" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="40" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="Librarian" value="Librarian" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="100" width="80" height="30" as="geometry" />
+        <mxCell id="3" value="Patient" style="shape=actor" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="40" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="Member" value="Member" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="180" width="80" height="30" as="geometry" />
+        <mxCell id="4" value="Receptionist" style="shape=actor" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="System Admin" style="shape=actor" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="40" height="80" as="geometry"/>
         </mxCell>
         
-        <!-- User Management -->
-        <mxCell id="UserManagement" value="User Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="20" width="120" height="60" as="geometry" />
+        <!-- Use Cases -->
+        <mxCell id="6" value="Manage Appointments" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="UserRegistration" value="User Registration" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="7" value="Manage Patients" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="UserRoles" value="User Roles and Permissions" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="8" value="Manage Doctors" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="300" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="UserAccount" value="User Account Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UserManagement">
-          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
+        <mxCell id="9" value="Manage Fees" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="400" width="160" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Book Management -->
-        <mxCell id="BookManagement" value="Book Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="20" width="120" height="60" as="geometry" />
+        <mxCell id="10" value="Generate Financial Reports" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="500" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Inventory" value="Inventory Management" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="11" value="Manage Medications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="600" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Categorization" value="Categorization and Tagging" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="12" value="Manage Prescriptions" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="700" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Availability" value="Availability Tracking" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BookManagement">
-          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
+        <mxCell id="13" value="Manage Supplies" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="800" width="160" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Borrowing and Returning -->
-        <mxCell id="BorrowingReturning" value="Borrowing and Returning" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="120" width="120" height="60" as="geometry" />
+        <mxCell id="14" value="Manage Tasks" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Transaction" value="Transaction Handling" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="15" value="Manage Treatments" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Reservation" value="Reservation System" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="16" value="Manage Users" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="160" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="Renewals" value="Renewals" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BorrowingReturning">
-          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
+        <mxCell id="17" value="Utilize Utilities" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="400" width="160" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Search and Discovery -->
-        <mxCell id="SearchDiscovery" value="Search and Discovery" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
+        
+        <!-- Associations -->
+        <mxCell id="18" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Search" value="Search Functionality" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="19" edge="1" parent="1" source="2" target="7">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Filters" value="Advanced Filters" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="20" edge="1" parent="1" source="2" target="12">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Recommendations" value="Recommendation System" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="SearchDiscovery">
-          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
+        <mxCell id="21" edge="1" parent="1" source="2" target="15">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
-        <!-- Reporting and Analytics -->
-        <mxCell id="ReportingAnalytics" value="Reporting and Analytics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="220" width="120" height="60" as="geometry" />
+        <mxCell id="22" edge="1" parent="1" source="3" target="6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Reports" value="Reports for Administrators" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="23" edge="1" parent="1" source="4" target="7">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Analytics" value="Usage Analytics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="24" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Dashboards" value="Customizable Dashboards" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ReportingAnalytics">
-          <mxGeometry x="10" y="90" width="100" height="30" as="geometry" />
+        <mxCell id="25" edge="1" parent="1" source="4" target="9">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
-        <!-- Notifications -->
-        <mxCell id="Notifications" value="Notifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="220" width="120" height="60" as="geometry" />
+        <mxCell id="26" edge="1" parent="1" source="4" target="13">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Alerts" value="Automated Alerts" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Notifications">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
+        <mxCell id="27" edge="1" parent="1" source="5" target="8">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="Events" value="Event Notifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Notifications">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
+        <mxCell id="28" edge="1" parent="1" source="5" target="16">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
-        <!-- Integration -->
-        <mxCell id="Integration" value="Integration" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="320" width="120" height="60" as="geometry" />
+        <mxCell id="29" edge="1" parent="1" source="5" target="10">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="APIs" value="Third-party APIs" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Integration">
-          <mxGeometry x="10" y="10" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="BarcodeRFID" value="Barcode and RFID Support" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="Integration">
-          <mxGeometry x="10" y="50" width="100" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- Relationships -->
-        <mxCell id="rel1" edge="1" parent="1" source="Admin" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel2" edge="1" parent="1" source="Admin" target="BookManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel3" edge="1" parent="1" source="Admin" target="ReportingAnalytics" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel4" edge="1" parent="1" source="Admin" target="Integration" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel5" edge="1" parent="1" source="Librarian" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel6" edge="1" parent="1" source="Librarian" target="BookManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel7" edge="1" parent="1" source="Librarian" target="BorrowingReturning" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel8" edge="1" parent="1" source="Librarian" target="SearchDiscovery" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel9" edge="1" parent="1" source="Librarian" target="ReportingAnalytics" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel10" edge="1" parent="1" source="Librarian" target="Notifications" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel11" edge="1" parent="1" source="Librarian" target="Integration" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel12" edge="1" parent="1" source="Member" target="UserManagement" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel13" edge="1" parent="1" source="Member" target="BorrowingReturning" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel14" edge="1" parent="1" source="Member" target="SearchDiscovery" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rel15" edge="1" parent="1" source="Member" target="Notifications" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="30" edge="1" parent="1" source="5" target="17">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
