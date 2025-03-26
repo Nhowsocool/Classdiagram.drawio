@@ -127,3 +127,6 @@
         <mxCell id="rel3" edge="1" parent="1" source="Fee" target="BaseEntity" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
